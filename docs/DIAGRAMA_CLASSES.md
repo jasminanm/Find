@@ -68,10 +68,3 @@ classDiagram
 | User → Rating | 1:N | Um utilizador pode avaliar vários bancos |
 | Bench → Rating | 1:N | Um banco pode ter várias avaliações |
 | User + Bench → Rating | único | Um utilizador só pode avaliar o mesmo banco uma vez |
-
-## Pacotes relacionados
-
-- Entidades: `pt.iade.find.model`
-- Repositórios: `pt.iade.find.repository`
-- Serviços: `pt.iade.find.service`
-- Controllers: `pt.iade.find.controller`
