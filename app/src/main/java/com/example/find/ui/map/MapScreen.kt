@@ -7,21 +7,25 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Login
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AdminPanelSettings
-import androidx.compose.material.icons.filled.Login
-import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SmallFloatingActionButton
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -39,6 +43,7 @@ import com.example.find.data.model.UserRole
 import com.example.find.data.model.UserSession
 import com.example.find.ui.auth.AuthViewModel
 import com.example.find.ui.bench.BenchViewModel
+import com.example.find.ui.components.FindTopBar
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
@@ -113,16 +118,18 @@ fun MapScreen(
     }
 
     Scaffold(
+        containerColor = MaterialTheme.colorScheme.background,
         topBar = {
-            TopAppBar(
-                title = { Text("Find - Bancos de Jardim") },
+            FindTopBar(
+                title = "Find",
+                subtitle = if (session != null) session.email else "Bancos de jardim perto de ti",
                 actions = {
                     IconButton(onClick = onNavigateToSearch) {
                         Icon(Icons.Default.Search, contentDescription = "Pesquisar")
                     }
                     if (session == null) {
                         IconButton(onClick = onNavigateToLogin) {
-                            Icon(Icons.Default.Login, contentDescription = "Entrar")
+                            Icon(Icons.AutoMirrored.Filled.Login, contentDescription = "Entrar")
                         }
                     } else {
                         if (session.role == UserRole.ADMIN) {
@@ -131,7 +138,7 @@ fun MapScreen(
                             }
                         }
                         IconButton(onClick = onLogout) {
-                            Icon(Icons.Default.Logout, contentDescription = "Sair")
+                            Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = "Sair")
                         }
                     }
                 }
@@ -139,7 +146,12 @@ fun MapScreen(
         },
         floatingActionButton = {
             if (session != null) {
-                FloatingActionButton(onClick = onNavigateToReport) {
+                FloatingActionButton(
+                    onClick = onNavigateToReport,
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary,
+                    elevation = FloatingActionButtonDefaults.elevation(6.dp)
+                ) {
                     Icon(Icons.Default.Add, contentDescription = "Reportar banco")
                 }
             }
@@ -166,8 +178,8 @@ fun MapScreen(
                         }
                         Marker(
                             state = rememberMarkerState(position = position),
-                            title = "${bench.color} - ${bench.type.name}",
-                            snippet = "${bench.widthMeters}m",
+                            title = "${bench.color} · ${bench.type.name}",
+                            snippet = "${bench.widthMeters} m",
                             icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN),
                             onClick = {
                                 onBenchClick(bench.id)
@@ -178,19 +190,42 @@ fun MapScreen(
                 }
             }
 
+            Surface(
+                shape = RoundedCornerShape(20.dp),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.94f),
+                tonalElevation = 2.dp,
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .padding(12.dp)
+            ) {
+                Text(
+                    text = if (listState.benches.isEmpty() && !listState.isLoading) {
+                        "Nenhum banco no mapa"
+                    } else {
+                        "${listState.benches.size} bancos no mapa"
+                    },
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
+                )
+            }
+
             if (listState.isLoading && listState.benches.isEmpty()) {
                 CircularProgressIndicator(
                     modifier = Modifier
-                        .align(Alignment.TopCenter)
-                        .padding(16.dp)
+                        .align(Alignment.Center)
+                        .padding(16.dp),
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
 
             if (hasLocationPermission) {
-                FloatingActionButton(
+                SmallFloatingActionButton(
                     onClick = {
                         locationViewModel.fetchCurrentLocation(context, forceRefresh = true)
                     },
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.primary,
                     modifier = Modifier
                         .align(Alignment.BottomStart)
                         .padding(16.dp)

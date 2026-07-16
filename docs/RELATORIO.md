@@ -1,8 +1,7 @@
 # Relatório — Find (Bancos de Jardim)
 
 > **Universidade Europeia — IADE**  
-> Projeto de Desenvolvimento de Software  
-> Preencher: nomes dos elementos do grupo, data e link GitHub.
+> Projeto de Desenvolvimento de Software
 
 ## 1. Identificação
 
@@ -10,9 +9,9 @@
 |-------|-------|
 | Universidade | Universidade Europeia |
 | Faculdade | IADE |
-| Grupo | _[Preencher]_ |
+| Grupo | |
 | Projeto | Find — Bancos de Jardim |
-| GitHub | _[Preencher link]_ |
+| GitHub | |
 
 ## 2. Tabela de tarefas
 

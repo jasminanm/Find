@@ -49,6 +49,11 @@ public class DataInitializer implements CommandLineRunner {
             benchRepository.save(createBench(38.7223, -9.1393, BenchType.WOOD, "Castanho", 1.8, BenchStatus.APPROVED, demoUser));
             benchRepository.save(createBench(38.7250, -9.1500, BenchType.CEMENT, "Cinza", 2.0, BenchStatus.APPROVED, demoUser));
             benchRepository.save(createBench(38.7300, -9.1450, BenchType.METAL, "Preto", 1.5, BenchStatus.PENDING, demoUser));
+            benchRepository.save(createBench(38.7165, -9.1480, BenchType.WOOD, "Verde", 1.6, BenchStatus.APPROVED, demoUser));
+            benchRepository.save(createBench(38.7362, -9.1425, BenchType.STONE, "Bege", 2.2, BenchStatus.APPROVED, demoUser));
+            benchRepository.save(createBench(38.7108, -9.1335, BenchType.CEMENT, "Branco", 1.9, BenchStatus.APPROVED, demoUser));
+            benchRepository.save(createBench(38.7285, -9.1560, BenchType.METAL, "Azul", 1.4, BenchStatus.APPROVED, demoUser));
+            benchRepository.save(createBench(38.7410, -9.1378, BenchType.WOOD, "Vermelho", 2.1, BenchStatus.APPROVED, demoUser));
         }
     }
 

@@ -64,5 +64,3 @@ Conta demo: `admin@find.pt` / `admin123`
 1. Entra com conta de administrador
 2. Toca no ícone de admin
 3. Aprova ou rejeita bancos reportados
-
-> **Nota:** Adiciona screenshots da app nesta secção antes da entrega final.
