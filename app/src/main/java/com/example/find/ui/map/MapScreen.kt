@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -165,6 +166,12 @@ fun MapScreen(
             GoogleMap(
                 modifier = Modifier.fillMaxSize(),
                 cameraPositionState = cameraPositionState,
+                contentPadding = PaddingValues(
+                    start = 8.dp,
+                    top = 8.dp,
+                    end = 8.dp,
+                    bottom = if (session != null) 96.dp else 24.dp
+                ),
                 properties = MapProperties(isMyLocationEnabled = hasLocationPermission),
                 uiSettings = MapUiSettings(
                     myLocationButtonEnabled = false,
