@@ -78,7 +78,26 @@ A solução cumpre os requisitos obrigatórios: mapa com GPS, base de dados rela
 
 ## 10. Bibliografia
 
-- Spring Boot Documentation — https://spring.io/projects/spring-boot
-- Android Jetpack Compose — https://developer.android.com/jetpack/compose
-- Google Maps Platform — https://developers.google.com/maps
-- PostgreSQL Documentation — https://www.postgresql.org/docs/
+Bocoup. (2011). *Documenting your API*. https://bocoup.com/blog/documenting-your-api
+
+EIT Urban Mobility. (n.d.). *Citizen Bench*. https://www.eiturbanmobility.eu/projects/citizen-bench/
+
+Google. (n.d.). *Google Maps Platform documentation*. https://developers.google.com/maps
+
+Google. (n.d.). *Jetpack Compose*. Android Developers. https://developer.android.com/jetpack/compose
+
+IETF. (2015). *JSON Web Token (JWT)* (RFC 7519). https://datatracker.ietf.org/doc/html/rfc7519
+
+Li, C., So, M., Kabir, U., Mankoff, J., & Froehlich, J. E. (2024). “I never realized sidewalks were a big deal”: A case study of a community-driven sidewalk audit using Project Sidewalk. In *Proceedings of the CHI Conference on Human Factors in Computing Systems*. https://doi.org/10.1145/3613904.3642059
+
+Oracle. (n.d.). *Jakarta Persistence (JPA)*. https://jakarta.ee/specifications/persistence/
+
+PostgreSQL Global Development Group. (n.d.). *PostgreSQL documentation*. https://www.postgresql.org/docs/
+
+Prandi, C. (2016). *Participatory sensing and crowdsourcing in urban environment* [Tese de doutoramento, Università di Bologna]. https://doi.org/10.6092/unibo/amsdottorato/7490
+
+Spring. (n.d.). *Spring Boot reference documentation*. https://docs.spring.io/spring-boot/docs/current/reference/html/
+
+Spring. (n.d.). *Spring Security reference*. https://docs.spring.io/spring-security/reference/
+
+Square. (n.d.). *Retrofit: A type-safe HTTP client for Android and Java*. https://square.github.io/retrofit/
