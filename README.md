@@ -57,20 +57,6 @@ Swagger UI: `http://localhost:8081/swagger-ui.html`
 | admin@find.pt | admin123 | Administrador |
 | user@find.pt | user123 | Utilizador |
 
-### 3. Android
-
-Edita `local.properties` na raiz do projeto:
-
-```properties
-sdk.dir=/caminho/para/Android/Sdk
-MAPS_API_KEY=a_tua_google_maps_api_key
-API_BASE_URL=http://10.0.2.2:8081/
-```
-
-> `10.0.2.2` é o localhost visto pelo emulador Android. Para dispositivo físico, usa o IP da máquina (ex: `http://192.168.1.10:8080/`).
-
-Abre o projeto no Android Studio e executa no emulador ou dispositivo.
-
 ## Funcionalidades
 
 - Ver bancos aprovados no mapa (sem login)
