@@ -75,9 +75,3 @@ Swagger UI: `http://localhost:8081/swagger-ui.html`
 | Backend | Java 17, Spring Boot 3, Spring Security, JWT |
 | Base de dados | PostgreSQL, Spring Data JPA |
 | API | REST, OpenAPI/Swagger |
-
-## Entrega
-
-- Prazo: **16/07 às 18:00**
-- Email: pedro.rosa@universidadeeuropeia.pt
-- Apresentação: **17/07 às 12:00** no IADE
