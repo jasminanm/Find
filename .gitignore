@@ -1,0 +1,14 @@
+*.iml
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+/build
+/app/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+backend/target/
+*.log
+.github/modernize/

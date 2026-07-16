@@ -1,0 +1,5 @@
+# Copia este ficheiro para local.properties e preenche os valores
+
+sdk.dir=/Users/SEU_UTILIZADOR/Library/Android/sdk
+MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+API_BASE_URL=http://10.0.2.2:8081/
