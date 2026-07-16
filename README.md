@@ -17,7 +17,7 @@ Find/
 
 | Documento | Descrição |
 |-----------|-----------|
-| [Relatório](docs/RELATORIO.md) | Relatório do projeto |
+| [Relatório (PDF)](docs/RELATORIO.pdf) | Relatório do projeto |
 | [REST API](docs/REST_API.md) | Documentação da API REST |
 | [Manual do Utilizador](docs/MANUAL_UTILIZADOR.md) | Guia de utilização da app |
 | [Arquitetura](docs/ARQUITETURA.md) | Arquitetura da solução |
