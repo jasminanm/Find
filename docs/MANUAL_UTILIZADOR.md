@@ -13,14 +13,14 @@
 - Toca num marcador para ver detalhes
 
 **Barra superior:**
-- 🔍 Pesquisar bancos por características
-- 🔑 Entrar (se não autenticado)
-- ⚙️ Painel admin (só administradores)
-- 🚪 Sair (se autenticado)
+- Pesquisar bancos por características
+- Entrar (se não autenticado)
+- Painel admin (só administradores)
+- Sair (se autenticado)
 
 **Botões:**
-- 📍 (canto inferior esquerdo) — voltar à localização atual
-- ➕ (canto inferior direito) — reportar novo banco (requer login)
+- Canto inferior esquerdo — voltar à localização atual
+- Canto inferior direito — reportar novo banco (requer login)
 
 ## Sem conta
 
@@ -38,7 +38,7 @@ Podes usar a app **sem login** para:
 ## Reportar um banco
 
 1. Entra na tua conta
-2. Toca no botão ➕
+2. Toca no botão de reportar (canto inferior direito)
 3. A app usa a localização GPS atual
 4. Seleciona tipo (madeira, cimento, etc.)
 5. Indica cor e largura
@@ -52,7 +52,7 @@ Podes usar a app **sem login** para:
 
 ## Pesquisar
 
-1. Toca em 🔍 no mapa
+1. Toca em Pesquisar no mapa
 2. Filtra por cor, largura e/ou tipo
 3. Toca em "Pesquisar"
 4. Seleciona um resultado para ver detalhes

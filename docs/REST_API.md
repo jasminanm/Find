@@ -1,6 +1,6 @@
 # Documentação REST API — Find
 
-Base URL: `http://localhost:8080`
+Base URL: `http://localhost:8081`
 
 Autenticação: header `Authorization: Bearer <token>` (exceto endpoints públicos).
 
@@ -147,4 +147,4 @@ Rejeita um banco.
 
 ## Swagger
 
-Documentação interativa: `http://localhost:8080/swagger-ui.html`
+Documentação interativa: `http://localhost:8081/swagger-ui.html`

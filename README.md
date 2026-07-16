@@ -21,6 +21,9 @@ Find/
 | [REST API](docs/REST_API.md) | Documentação da API REST |
 | [Manual do Utilizador](docs/MANUAL_UTILIZADOR.md) | Guia de utilização da app |
 | [Arquitetura](docs/ARQUITETURA.md) | Arquitetura da solução |
+| [Diagrama de Classes](docs/DIAGRAMA_CLASSES.md) | Diagrama de classes do domínio |
+| [Dicionário de Dados](docs/DICIONARIO_DADOS.md) | Dicionário de dados |
+| [Guia de Dados](docs/GUIA_DADOS.md) | Guia da BD de exemplo |
 
 ## Requisitos
 
